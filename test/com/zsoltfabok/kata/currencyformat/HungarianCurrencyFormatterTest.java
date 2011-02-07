@@ -44,4 +44,15 @@ public class HungarianCurrencyFormatterTest {
     public void shouldReturnOneMillionInHungarianFormat() {
         assertEquals("1 000 000", formatter.format("1000000"));
     }
+
+    @Test
+    public void shouldReturnTenPointOneInHungarianFormat() {
+        assertEquals("10,1", formatter.format("10.1"));
+    }
+
+    @Test
+    public void shouldReturnThousandPointOneInHungarianFormat() {
+        assertEquals("1 000,1", formatter.format("1000.1"));
+    }
+
 }
